@@ -1,5 +1,7 @@
 # JSON structural diff
 
+fork from https://github.com/andreyvit/json-diff. simple covert to typescript
+
 Does exactly what you think it does:
 
 ![Screenshot](https://github.com/andreyvit/json-diff/raw/master/doc/screenshot.png)
