@@ -14,6 +14,7 @@
   "bin": "bin/json-diff.js",
   "scripts": {
     "test": "jest --coverage",
+    "prepublish": "yarn build",
     "prebuild": "rm -rf dist",
     "build": "tsc"
   },
