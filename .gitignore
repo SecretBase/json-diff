@@ -3,3 +3,6 @@ node_modules
 !bin/*.js
 /lib-cov
 coverage.html
+dist
+!babel.config.js
+coverage

@@ -10,12 +10,13 @@
   "repository": {
     "url": "git@github.com:andreyvit/json-diff.git"
   },
-  "main": "lib/index.js",
+  "main": "dist/index.js",
   "bin": "bin/json-diff.js",
   "scripts": {
     "prepare": "coffee -c lib",
-    "test": "mocha test/*.coffee",
-    "cov": "rm -rf lib-cov; jscoverage lib lib-cov; env JSLIB=lib-cov mocha -R dot && env JSLIB=lib-cov mocha -R html-cov >coverage.html; open coverage.html"
+    "test": "jest --coverage",
+    "prebuild": "rm -rf dist",
+    "build": "tsc"
   },
   "dependencies": {
     "cli-color": "~0.1.6",
@@ -23,11 +24,17 @@
     "dreamopt": "~0.6.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/preset-typescript": "^7.8.3",
+    "@types/jest": "^25.1.1",
+    "@types/node": "^13.7.0",
     "coffee-script": "^1.12.7",
-    "mocha": "~1.7.0"
+    "jest": "^25.1.0",
+    "mocha": "~1.7.0",
+    "typescript": "^3.7.5"
   },
-  "optionalDependencies": {},
   "engines": {
-    "node": "*"
+    "node": ">=12"
   }
 }
